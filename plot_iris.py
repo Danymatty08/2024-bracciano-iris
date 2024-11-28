@@ -22,6 +22,16 @@ plt.title('Distribuzione dei Sepali')
 plt.legend()
 
 # Plot per i petali
+plt.subplot(1, 2, 2)
+
+for i in range(3):
+    mask = y == i
+
+    plt.scatter(X[mask, 2], X[mask, 3], label=iris.target_names[i])
+plt.xlabel('Lunghezza petalo')
+plt.ylabel('Larghezza petalo')
+plt.title('Distribuzione dei petali')
+plt.legend()
 
 # Ora tocca a te! Prova a fare il plot dei petali!
 # Poi fai commit e push
